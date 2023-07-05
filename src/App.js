@@ -16,29 +16,27 @@ function App() {
   function addText(text) {
     setTexts([...texts, text]);
   }
-  
-   function increment() {
+
+  function increment() {
     setCounter(counter + 1);
   }
   function decrement() {
     setCounter(counter - 1);
   }
-  
+
   return (
-    <div style={{ display: "flex", justifyContent: "center" } >
+    <div>
       <h1>Add Paragraph: {texts.length}</h1>
       <Paragraph addText={addText} />
       <ParagraphList texts={texts} />
-        
-        <Counter
+
+      <Counter
         counter={counter}
         setCounter={setCounter}
         increment={increment}
         decrement={decrement}
       />
-          
     </div>
-
   );
 }
 
